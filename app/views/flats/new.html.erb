@@ -1,0 +1,13 @@
+<%= form_for @flat do |f| %>
+  <%= f.label :name, "Name: " %>
+  <%= f.text_field :name %>
+  <%= f.label :address, "Address: " %>
+  <%= f.text_field :address %>
+  <%= f.label :description, "Description: " %>
+  <%= f.text_field :description %>
+  <%= f.label :price_per_night, "💰" %>
+  <%= f.number_field :price_per_night, step: 1, min: 0, max: 1000000 %>
+  <%= f.label :number_of_guests, "Number of guests: " %>
+  <%= f.number_field :number_of_guests, step: 1, min: 0, max:10 %>
+  <%= f.submit "Submit a new flat 🐀"%>
+<% end %>
